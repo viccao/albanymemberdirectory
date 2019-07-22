@@ -1,0 +1,83 @@
+global:
+  sql_adapter: "default"
+
+local:
+  vhost: 'http://albanymembers.local'
+  wordpress_path: "/Users/vic/Desktop/Docker/albanymember/www/"
+  database:
+    name: 'wordpress'
+    user: 'wordpress'
+    password: 'password'
+    host: '0.0.0.0'
+  exclude:
+    - ".git/"
+    - ".gitignore"
+    - ".sass-cache/"
+    - bin/
+    - tmp/*
+    - Gemfile*
+    - Movefile.yml
+    - wp-config.php
+    - wp-content/*.sql
+    - node_modules/*
+    - ".DS_Store"
+
+staging:
+  vhost: "http://albanymembers.dev.caocreative.com"
+  wordpress_path: "/srv/users/serverpilot/apps/albanymembers/public/" # use an absolute path here
+
+  database:
+    name: 'albanymembers'
+    user: '49821953d6c6'
+    password: 'fde91f20293cbe05'
+    host: "localhost"
+
+  exclude:
+    - ".git/"
+    - ".gitignore"
+    - ".sass-cache/"
+    - "bin/"
+    - "tmp/*"
+    - "Gemfile*"
+    - "Movefile.yml"
+    - "wp-config.php"
+    - "wp-content/*.sql"
+    - ".htaccess"
+    - "node_modules/"
+    - ".DS_Store"
+
+  ssh:
+    host: "138.197.9.10"
+    user: 'serverpilot'
+    password: 'f4d26da5e6c8e0ae5bfec9c1fe'
+    rsync_options: "--verbose"
+
+production:
+  vhost: ''
+  wordpress_path: '' # use an absolute path here
+
+  database:
+    name: ''
+    user: ''
+    password: ''
+    host: "localhost"
+
+  exclude:
+    - ".git/"
+    - ".gitignore"
+    - ".sass-cache/"
+    - "bin/"
+    - "tmp/*"
+    - "Gemfile*"
+    - "Movefile.yml"
+    - "wp-config.php"
+    - "wp-content/*.sql"
+    - ".htaccess"
+    - "node_modules/"
+    - ".DS_Store"
+
+  ftp:
+    host: ''
+    user: ''
+    password: ''
+    rsync_options: "--verbose"

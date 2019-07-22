@@ -1,0 +1,82 @@
+$fiwi-qo-panel-height: 100vh;
+
+body.fiwi-qo-panel-in {
+    .fiwi-qo-panel {
+        // transform: translate3d(0,0,0);
+        width: 50vw;
+    }
+}
+.fiwi-qo-panel {
+    z-index: 999999999999999; // lol
+    width: 500px;
+    height: $fiwi-qo-panel-height;
+    position: fixed;
+    top: 0;
+    right: 0;
+    // transform: translate3d(100%,0,0);
+    width: 0%;
+    transition: all 0.4s cubic-bezier(.17,.67,.35,1.15);
+
+    &__inner {
+        position: relative;
+        .fiwi-qo-panel {
+            &__indicator {
+                cursor: pointer;
+                background-color: rgba(0,0,0,.5);
+                width: 2rem;
+                height: 2rem;
+                position: absolute;
+                top: 32px;
+                left: -2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .fa {
+                    transform: rotate(0) scale(1);
+                    transition: all 0.4s cubic-bezier(.17,.67,.35,2);
+                    font-size: 1rem;
+                    color: white;
+//                    color: $color-tertiary;
+                }
+
+                    &:hover,
+                    &:focus {
+//                        background-color: $color-secondary;
+                        .fa {
+                            transform: rotate(45deg) scale(1.25);
+                        }
+                    }
+
+//                @media #{$large-up}{
+//                    &:hover,
+//                    &:focus {
+////                        background-color: $color-secondary;
+//                        .fa {
+//                            transform: rotate(45deg) scale(1.25);
+//                        }
+//                    }
+//                }
+            }
+            &__content {
+                padding: 2rem;
+                background-color: white;
+                overflow-y: scroll;
+                height: $fiwi-qo-panel-height;
+                position: relative;
+            }
+        }
+
+    }
+}
+
+#wpadminbar {
+
+        background: #23282d;
+    * {
+    font-family: 'Gotham', 'Avenir Next', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: normal;
+    letter-spacing: -.025em;
+}
+
+}
